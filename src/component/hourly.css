@@ -1,0 +1,60 @@
+.container_h
+{
+    height: auto;
+    width: 80%;
+    /* background-color: red; */
+    border:none;
+    position:relative;
+    top:162px;
+    left: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 18px;
+}
+.head_hourly_weather
+{
+    font-size: 1.3rem;
+    color: rgb(90, 90, 90);
+    font-weight: 500;
+    position: absolute;
+    top:83px;
+    left: 12.25%;
+}
+.date_for_hourly
+{
+    font-size: 1.3rem;
+    color: rgb(90, 90, 90);
+    font-weight: 500;
+    position: absolute;
+    top:83px;
+    right: 10.6%;
+}
+.error_back_hourly
+{
+    height:90vh;
+    width: 100%;
+    position: absolute;
+    top:-81.5px;
+    left: 0%;
+    background-color: rgb(238, 238, 238);
+    /* background-color: red; */
+}
+.error_current_hourly
+{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(129, 129, 129);
+    position: absolute;
+    top:20%;
+    left:36%;
+}
+.try_again_hourly
+{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(67, 67, 67);
+    position: absolute;
+    top:32%;
+    left:38%;
+}

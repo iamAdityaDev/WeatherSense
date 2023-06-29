@@ -1,0 +1,159 @@
+.heading_weather_send
+{
+    font-size: 3.5rem;
+    font-weight: 700;
+    position: absolute;
+    top:55px;
+    left: 100px;
+    color: rgb(79, 79, 79);
+}
+.sub_heading
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: absolute;
+    top:165px;
+    left: 110px;
+    color: rgb(138, 138, 138);
+}
+.ss_head
+{
+    font-size: 2.4rem;
+    color: rgb(93, 93, 93);
+    font-weight: 700;
+}
+.ss_home
+{
+    height: 450px;
+    padding: 10px;
+    padding-bottom: 16px;
+    border-radius: 7px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.ss_desc
+{
+    font-weight: 400;
+    color: rgb(127, 127, 127);
+    font-size: 1.3rem;
+}
+
+.home_current
+{
+    position: absolute;
+    top:260px;
+    right: 270px;
+}
+.curr_weather_sense
+{
+    position: absolute;
+    top:215px;
+    left: 329px;
+}
+.desc_current
+{
+    width: 430px;
+    position: absolute;
+    top: 300px;
+    left: 280px;
+}
+
+.home_daily
+{
+    position: absolute;
+    top:795px;
+    left: 269px;
+}
+.daily_weather_sense
+{
+    position: absolute;
+    top:1265px;
+    left: 550px;
+}
+.desc_daily
+{
+    text-align: center;
+    width: 700px;
+    position: absolute;
+    top: 1355px;
+    left: 390px;
+}
+
+
+.home_hourly
+{
+    position: absolute;
+    top:1690px;
+    left: 269px;
+}
+.hourly_weather_sense
+{
+    position: absolute;
+    top:1647px;
+    left: 860px;
+}
+.desc_hourly
+{
+
+    width: 450px;
+    position: absolute;
+    top: 1735px;
+    left: 775px;
+}
+.home_footer
+{
+    height: 120px;
+    width: 100%;
+    background-color: rgb(197, 197, 197);
+    position: absolute;
+    top: 2280px;
+    display: flex;
+    flex-direction: column;
+}
+.contact_footer
+{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(105, 105, 105);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    top:-10px
+}
+.flexbox_footer
+{
+    height: 40px;
+    width:180px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top:30px;
+    left: 672px;
+}
+.takeme
+{
+    height: 40px;
+    margin-right: 19px;
+}
+.contact_img_footer
+{
+    opacity: 0.55;
+}
+.api_ref
+{
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(80, 80, 80);
+    position: relative;
+    top:53px;
+    left: -2px;
+}
+.weather_api
+{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(47, 47, 47);
+    position: relative;
+    left: 6.5px;
+}

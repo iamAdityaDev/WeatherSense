@@ -1,0 +1,139 @@
+.hour_div
+{
+    background-color: white;
+    height: 240px;
+    width: 580px;
+    border:solid 2px rgb(221, 221, 221);
+    border-radius:7px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+}
+.flex_one
+{
+    height: 80px;
+    width: 99%;
+    /* background-color: red;  */
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0.5%;
+    top: 0.5%;
+}
+.hour
+{
+    font-size: 1.17rem;
+    font-weight: 600;
+    color: rgb(137, 137, 137);
+    position:relative;
+    top:5px;
+    left:13px;
+}
+.cloud_image_h
+{
+    opacity: 0.93;
+    height: 70px;
+    position: relative;
+    top: 7px;
+    left: 40px;
+}
+.curr_temp_h
+{
+    font-size: 3.1rem;
+    font-weight: 500;
+    color: rgb(60, 60, 60);
+    position: relative;
+    top:-46px;
+    left:41px;
+}
+.feelslike_label_h
+{
+    font-size: 1.2rem;
+    color: rgb(81, 81, 81);
+    position: relative;
+    top: 3px;
+    left:90px;
+}
+.feelslike_value_h
+{
+    font-size: 1.2rem;
+    color: rgb(58, 58, 58);
+    position: relative;
+    top: 2.9px;
+    left:96px;
+}
+.drop_h
+{
+    opacity: 0.4;
+    height: 60px;
+    position: relative;
+    top:22.8px;
+    left: 171px;
+}
+.chance_rain_h
+{
+    font-size: 1.2rem;
+    color: rgb(58, 58, 58);
+    position: relative;
+    top: 2px;
+    left:175px;
+}
+.weather_condition_h
+{
+    font-size: 1.2rem;
+    color: rgb(83, 83, 83);
+    position: relative;
+    top:-16px;
+    left: 13px;
+}
+.outer_flexbox
+{
+    height: 100px;
+    width: 99%;
+    /* background-color: red; */
+    position: relative;
+    top: -12%;
+    left: 0.5%;
+    display: flex;
+    flex-direction: row;
+}
+.left_flexbox
+{
+    height: 100px;
+    width: 46%;
+    /* background-color: blue; */
+    margin-right: 2.5%;
+    margin-left: 1.5%;
+    display: flex;
+    flex-direction: column;
+}
+.right_flexbox
+{
+    height: 100px;
+    width: 46%;
+    /* background-color: rgb(93, 93, 220); */
+    margin-right: 1.5%;
+    margin-left: 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+.inner_div_h
+{
+    height: 48px;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 2px rgb(215, 215, 215);
+}
+.info_label
+{
+    color: rgb(100, 100, 100);
+}
+.info_label_in
+{
+    margin-left: 60%;
+    color: rgb(41, 41, 41);
+}

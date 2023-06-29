@@ -1,0 +1,15 @@
+.spin_back {
+  z-index: 3;
+  height: 90vh;
+  width: 100vw;
+  background-color: rgb(238, 238, 238);
+  position: fixed;
+  top: 10.5vh;
+}
+.loading_spinner {
+  font-size: 1.6rem;
+  color: grey;
+  position: fixed;
+  top: 75px;
+  left: 719px;
+}

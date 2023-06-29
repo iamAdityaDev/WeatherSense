@@ -1,0 +1,95 @@
+.container_second
+{
+    height: auto;
+    width: 540px;
+    /* background-color: red; */
+    position: absolute;
+    top: 160.5px;
+    right: 177px;
+    display: flex;
+    flex-direction: column;
+}
+.div_second
+{
+    height: 100px;
+    width: 540px;
+    background-color: white;
+    border:solid 2px rgb(221, 221, 221);
+    border-radius: 7px;
+    margin-bottom: 13.8px;
+    display: flex;
+    flex-direction: column;
+}
+.flexbox_row_current
+{
+    height: 55px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+}
+.time_current_sec
+{
+    font-size: 1.17rem;
+    font-weight: 600;
+    color: rgb(137, 137, 137);
+    position:relative;
+    top:-9px;
+    left:7.6px;
+}
+.cloud_image_current_sec
+{
+    height: 50px;
+    position: relative;
+    top: 7px;
+    left: 55px;
+}
+.temp_current_sec
+{
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: rgb(72, 72, 72);
+    position: relative;
+    top:-33px;
+    left:62px;
+}
+.feels_like_current_sec
+{
+    font-size: 1.16rem;
+    color: rgb(81, 81, 81);
+    position: relative;
+    top: -4px;
+    left:105px;
+}
+.feels_like_current_value
+{
+    font-size: 1.17rem;
+    color: rgb(58, 58, 58);
+    position: relative;
+    top:-4px;
+    left:114px;
+}
+.drop_h_current_sec
+{
+    opacity: 0.35;
+    height: 60px;
+    position: relative;
+    top:15px;
+    left: 184px;
+}
+.rain_chance_current_sec
+{
+    font-size: 1.2rem;
+    color: rgb(58, 58, 58);
+    position: relative;
+    top:-5.5px;
+    left:191px;
+}
+.condition_current_sec
+{
+    font-size: 1.18rem;
+    color: rgb(104, 104, 104);
+    position: relative;
+    top:-11px;
+    left:15.5px;
+}
