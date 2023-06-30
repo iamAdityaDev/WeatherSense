@@ -1,14 +1,13 @@
-import "./App.css";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
-import { useState, useEffect } from "react";
 import Option from "./dropdown";
 import Current from "./component/current";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Hourly from "./component/hourly";
 import Daily from "./component/daily";
 import CurrentPart2 from "./component/current_part2";
 import Home from "./component/home";
-// import Spinner from './spinner';
+import './App.css'
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -18,19 +17,26 @@ function App() {
     let cont = document.getElementById("cont");
     cont.style.display = "flex";
     let text = document.getElementById("search_box_id").value;
-    let url = `http://api.weatherapi.com/v1/search.json?key=31c8b19cd52d4aad9e4160932232206&q=${text}`;
-    let data = await fetch(url); 
-    let parsedData = await data.json();
-    setLocations(parsedData);
+    let url = `https://api.weatherapi.com/v1/search.json?key=31c8b19cd52d4aad9e4160932232206&q=${text}`;
+
+    try {
+      let data = await fetch(url);
+      if (data.ok) {
+        let parsedData = await data.json();
+        setLocations(parsedData);
+      } else {
+        console.error("Error fetching data:", data.status, data.statusText);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   const changeLoc = (name, country) => {
     let cont = document.getElementById("cont");
     cont.style.display = "none";
     let text = document.getElementById("search_box_id");
-    text.value = name;
-    text.value += ", ";
-    text.value += country;
+    text.value = `${name}, ${country}`;
   };
 
   const fetch_city = () => {
@@ -39,20 +45,23 @@ function App() {
     let text = document.getElementById("search_box_id").value;
     setCityName(text);
   };
-  const title_change_home=()=>{
-    document.title="WeatherSense - Home"
-  }
-  const title_change_current=()=>{
-    document.title="WeatherSense - Current"
-  }
-  const title_change_daily=()=>{
-    document.title="WeatherSense - Daily"
-  }
-  const title_change_hourly=()=>{
-    document.title="WeatherSense - Hourly"
-  }
+
+  const title_change_home = () => {
+    document.title = "WeatherSense - Home";
+  };
+  const title_change_current = () => {
+    document.title = "WeatherSense - Current";
+  };
+  const title_change_daily = () => {
+    document.title = "WeatherSense - Daily";
+  };
+  const title_change_hourly = () => {
+    document.title = "WeatherSense - Hourly";
+  };
 
   useEffect(() => {
+   
+
     handleOnChange();
   }, []);
 
