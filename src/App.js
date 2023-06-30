@@ -3,7 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState, useEffect } from "react";
 import Option from "./dropdown";
 import Current from "./component/current";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Hourly from "./component/hourly";
 import Daily from "./component/daily";
 import CurrentPart2 from "./component/current_part2";
@@ -58,7 +58,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <BrowserRouter basename="WeatherSense">
         <div>
           <div className="navbar">
             <p className="name_nav">WeatherSense</p>
@@ -129,7 +129,7 @@ function App() {
           <Route path="/daily" element={<Daily city={cityName} />} />
           <Route path="/hourly" element={<Hourly city={cityName} />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
