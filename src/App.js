@@ -19,7 +19,7 @@ function App() {
     cont.style.display = "flex";
     let text = document.getElementById("search_box_id").value;
     let url = `http://api.weatherapi.com/v1/search.json?key=31c8b19cd52d4aad9e4160932232206&q=${text}`;
-    let data = await fetch(url);
+    let data = await fetch(url); 
     let parsedData = await data.json();
     setLocations(parsedData);
   };
