@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/WeatherSense/static/css/main.660295e9.css",
-    "main.js": "/WeatherSense/static/js/main.ed016c8c.js",
+    "main.css": "/WeatherSense/static/css/main.91ba35e1.css",
+    "main.js": "/WeatherSense/static/js/main.65f914e6.js",
     "static/js/787.5e4db69e.chunk.js": "/WeatherSense/static/js/787.5e4db69e.chunk.js",
     "static/media/home_daily.png": "/WeatherSense/static/media/home_daily.d04b2ac3802eaffbeb17.png",
     "static/media/home_hourly.png": "/WeatherSense/static/media/home_hourly.78040ea6197515391837.png",
     "static/media/home_current.png": "/WeatherSense/static/media/home_current.decf1134dd45e57d33bf.png",
     "index.html": "/WeatherSense/index.html",
-    "main.660295e9.css.map": "/WeatherSense/static/css/main.660295e9.css.map",
-    "main.ed016c8c.js.map": "/WeatherSense/static/js/main.ed016c8c.js.map",
+    "main.91ba35e1.css.map": "/WeatherSense/static/css/main.91ba35e1.css.map",
+    "main.65f914e6.js.map": "/WeatherSense/static/js/main.65f914e6.js.map",
     "787.5e4db69e.chunk.js.map": "/WeatherSense/static/js/787.5e4db69e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.660295e9.css",
-    "static/js/main.ed016c8c.js"
+    "static/css/main.91ba35e1.css",
+    "static/js/main.65f914e6.js"
   ]
 }
