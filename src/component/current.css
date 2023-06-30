@@ -240,6 +240,7 @@
 }
 .error_back_current
 {
+    z-index: 2;
     height:90vh;
     width: 81.2%;
     position: absolute;

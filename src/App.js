@@ -24,13 +24,13 @@ function App() {
     setLocations(parsedData);
   };
 
-  const changeLoc = (name, region) => {
+  const changeLoc = (name, country) => {
     let cont = document.getElementById("cont");
     cont.style.display = "none";
     let text = document.getElementById("search_box_id");
     text.value = name;
     text.value += ", ";
-    text.value += region;
+    text.value += country;
   };
 
   const fetch_city = () => {
@@ -96,7 +96,7 @@ function App() {
 
           <div className="container_navbar_search" id="cont">
             {locations.map?locations.map((element, index) => {
-              const combinedName = `${element.name} ${element.region}`;
+              const combinedName = `${element.name}, ${element.country}`;
               const truncatedName =
                 combinedName.length > 40
                   ? combinedName.slice(0, 38) + ".."
@@ -105,7 +105,7 @@ function App() {
               return (
                 <Option
                   key={index}
-                  onClick={() => changeLoc(element.name, element.region)}
+                  onClick={() => changeLoc(element.name, element.country)}
                   name={element.name}
                   region={element.region}
                   combinedName={truncatedName}

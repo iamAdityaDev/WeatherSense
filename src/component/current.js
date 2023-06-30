@@ -47,8 +47,7 @@ const Current = (props) => {
       {curr_data.length !== 0 ? (
         <>
           <p className="head_current_weather">
-            {curr_data.location.name}, {curr_data.location.region},{" "}
-            {curr_data.location.country.toUpperCase()} - Current Weather Status
+            {curr_data.location.name}, {curr_data.location.country} - Current Weather Status
           </p>
           <p className="date_for_current">
             {curr_data.location && curr_data.location.localtime
