@@ -10,6 +10,7 @@
     margin-bottom: 21px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .flex_one
 {
@@ -136,4 +137,83 @@
 {
     margin-left: 60%;
     color: rgb(41, 41, 41);
+}
+@media(max-width:620px)
+{
+    .hour_div
+{
+    height: 220px;
+    width: 470px;
+}
+.hour
+{
+    font-size: 1.17rem;
+    position:relative;
+    top:-2px;
+    left:13px;
+}
+.cloud_image_h
+{
+    height: 65px;
+    position: relative;
+    top: 2px;
+    left: 37px;
+}
+.curr_temp_h
+{
+    font-size: 2.7rem;
+    position: relative;
+    top:-41px;
+    left:38px;
+}
+.feelslike_label_h
+{
+    font-size: 1.1rem;
+    position: relative;
+    top: 0px;
+    left:65px;
+}
+.feelslike_value_h
+{
+    font-size: 1.11rem;
+    position: relative;
+    top: -0.2px;
+    left:71px;
+}
+.drop_h
+{
+    opacity: 0.4;
+    height: 55px;
+    position: relative;
+    top:18px;
+    left: 100px;
+}
+.chance_rain_h
+{
+    font-size: 1.11rem;
+    position: relative;
+    top: 0px;
+    left:103px;
+}
+.weather_condition_h
+{
+    font-size: 1.12rem;
+    position: relative;
+    top:-28px;
+    left: 13px;
+}
+.outer_flexbox
+{
+    position: relative;
+    top: -20%;
+}
+.info_label
+{
+    font-size: 0.96;
+}
+.info_label_in
+{
+    font-size: 0.96;
+    margin-left: 51%;
+}
 }

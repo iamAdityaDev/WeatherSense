@@ -1,33 +1,42 @@
 import React, { useEffect, useState } from "react";
 import "./current.css";
+import "./current_phone.css";
 import Spinner from "../spinner";
 
 const Current = (props) => {
-  const [curr_data, setCurr_data] = useState([]);
+  const [curr_data, setCurr_data] = useState({});
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://api.weatherapi.com/v1/current.json?key=31c8b19cd52d4aad9e4160932232206&q=${props.city}`;
-      setloading(true);
-      const response = await fetch(url);
-      const data = await response.json();
+      try {
+        const url = `https://api.weatherapi.com/v1/current.json?key=31c8b19cd52d4aad9e4160932232206&q=${props.city}`;
+        setloading(true);
+        const response = await fetch(url);
+        const data = await response.json();
 
-      const object = Object.keys(data);
-      const len = object.length;
-      if (len !== 1) {
-        setCurr_data(data);
+        const object = Object.keys(data);
+        const len = object.length;
+        if (len !== 1) {
+          setCurr_data(data);
+          setloading(false);
+        } else {
+          setloading(false);
+          setCurr_data({});
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
         setloading(false);
-      } else {
-        setloading(false);
-        setCurr_data([]);
+        setCurr_data({});
       }
     };
 
     fetchData();
   }, [props.city]);
 
-  const localTime = curr_data.location && curr_data.location.localtime;
+  const { current, location } = curr_data;
+
+  const localTime = location && location.localtime;
   const timeString = localTime
     ? new Date(localTime).toLocaleTimeString([], {
         hour: "numeric",
@@ -35,40 +44,32 @@ const Current = (props) => {
       })
     : "";
 
-  const feelsLikeTemp = curr_data.current && curr_data.current.feelslike_c;
+  const feelsLikeTemp = current && current.feelslike_c;
   const formattedfeelTemp = feelsLikeTemp ? Math.floor(feelsLikeTemp) : "";
 
-  const temp = curr_data.current && curr_data.current.temp_c;
+  const temp = current && current.temp_c;
   const formattedTemp = temp ? Math.floor(temp) : "";
 
   return (
     <>
       {loading && <Spinner />}
-      {curr_data.length !== 0 ? (
+      {Object.keys(curr_data).length !== 0 ? (
         <>
-          <p className="head_current_weather">
-            {curr_data.location.name}, {curr_data.location.country} - Current Weather Status
-          </p>
-          <p className="date_for_current">
-            {curr_data.location && curr_data.location.localtime
-              ? new Date(curr_data.location.localtime).toLocaleDateString(
-                  "en-US",
-                  {
+        <div className="header_current1">
+            <p className="head_current_weather">
+              {location.name}, {location.country} - Current Weather Status
+            </p>
+            <p className="date_for_current">
+              {location && location.localtime
+                ? new Date(location.localtime).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "short",
                     day: "numeric",
-                  }
-                )
+                  })
               : "Loading..."}
           </p>
-          In this code, the conditional check curr_data.location &&
-          curr_data.location.localtime ensures that both curr_data.location and
-          curr_data.location.localtime exist before attempting to access the
-          localtime property. If either of them is undefined or null, the code
-          will display the text "Loading..." to indicate that the data is being
-          fetched or not available yet. Once the check passes, it creates a Date
-          object from curr_data.location.localtime and formats it using the
-          toLocaleDateString method, similar to the previous example.
+          </div>
+          <div className="current_one_back">
           <div className="curr1_div">
             <p className="curr_weather_head">Current Weather</p>
             <p className="curr_time">{timeString}</p>
@@ -183,14 +184,17 @@ const Current = (props) => {
               </p>
             </div>
           </div>
+          </div>
         </>
       ) : (
         <>
           <div className="error_back_current">
-            <p className="error_current_current">No Results found !!</p>
-            <p className="try_again_current">
-              Check your location and try again
-            </p>
+            <div className="second_error_back_div">
+              <p className="error_current_current">No Results found!!</p>
+              <p className="try_again_current">
+                Check your location and try again
+              </p>
+            </div>
           </div>
         </>
       )}

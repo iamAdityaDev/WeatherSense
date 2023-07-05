@@ -71,39 +71,40 @@ function App() {
         <div>
           <div className="navbar">
             <p className="name_nav">WeatherSense</p>
-            <Link to="/" onClick={title_change_home} className="nav home">
-              Home
-            </Link>
-            <Link to="/current" onClick={title_change_current} className="nav current">
-              Current
-            </Link>
-            <Link to="/daily" onClick={title_change_daily} className="nav daily">
-              Daily
-            </Link>
-            <Link to="/hourly" onClick={title_change_hourly} className="nav hourly">
-              Hourly
-            </Link>
-            <div className="search_back_div">
-              <SearchIcon className="search_icon" />
-              <input
-                type="text"
-                onChange={handleOnChange}
-                placeholder="Search location.."
-                className="search_box"
-                id="search_box_id"
-              />
+            <div className="nav_flexbox">
+              <Link to="/" onClick={title_change_home} className="nav home">
+                Home
+              </Link>
+              <Link to="/current" onClick={title_change_current} className="nav current">
+                Current
+              </Link>
+              <Link to="/daily" onClick={title_change_daily} className="nav daily">
+                Daily
+              </Link>
+              <Link to="/hourly" onClick={title_change_hourly} className="nav hourly">
+                Hourly
+              </Link>
             </div>
-            <Link
-              onClick={fetch_city}
-              to="/current"
-              className="search"
-              id="search_id"
-            >
-              Search
-            </Link>
-          </div>
-
-          <div className="container_navbar_search" id="cont">
+            <div className="search_back_flexbox">
+              <div className="search_back_div">
+                <SearchIcon className="search_icon" />
+                <input
+                  type="text"
+                  onChange={handleOnChange}
+                  placeholder="Search location.."
+                  className="search_box"
+                  id="search_box_id"
+                />
+                <Link
+                onClick={fetch_city}
+                to="/current"
+                className="search"
+                id="search_id"
+                >
+                  Search
+                </Link>
+              </div>
+              <div className="container_navbar_search" id="cont">
             {locations.map?locations.map((element, index) => {
               const combinedName = `${element.name}, ${element.country}`;
               const truncatedName =
@@ -122,8 +123,11 @@ function App() {
               );
             }):''}
           </div>
+            </div>
+            
+          </div>
+        
         </div>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

@@ -51,6 +51,7 @@ const Hourly = (props) => {
 
       {jagah.length !== 0 ? (
         <>
+        <div className="hourly_head_back">
             <p className="head_hourly_weather">
               {jagah.location.name}, {jagah.location.country} - Hourly Weather ( 24
               Hours)
@@ -67,6 +68,7 @@ const Hourly = (props) => {
                 )
               : "Loading..."}
           </p>
+        </div>
         </>
       ) : (''
       )}
@@ -92,10 +94,12 @@ const Hourly = (props) => {
         ) : (
           <>
             <div className="error_back_hourly">
-              <p className="error_current_hourly">No Results found !!</p>
-              <p className="try_again_hourly">
-                Check your location and try again
-              </p>
+              <div className="second_error_back_hourly">
+                <p className="error_current_hourly">No Results found !!</p>
+                <p className="try_again_hourly">
+                  Check your location and try again
+                </p>
+              </div>
             </div>
           </>
         )}

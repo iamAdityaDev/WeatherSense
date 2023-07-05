@@ -1,6 +1,6 @@
 .navbar {
-  z-index: 2;
-  height: 75px;
+  z-index: 1;
+  height: 78px;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -10,7 +10,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
 }
 .name_nav {
   font-size: 1.5rem;
@@ -19,10 +18,19 @@
   margin-left: 1.2%;
   color: rgb(80, 80, 80);
 }
+.nav_flexbox
+{
+  z-index: 2;
+  height: auto;
+  width: 270px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 1%;
+}
 .nav {
   font-size: 1.2rem;
   color: rgb(83, 83, 83);
-  margin-right: 1.1%;
+  margin-right: 7%;
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
@@ -30,11 +38,27 @@
 .nav:hover {
   color: rgb(43, 43, 43);
 }
-.search_back_div {
-  height: 45px;
-  width: 456px;
+.search_back_flexbox
+{
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  /* background-color: red; */
   position: absolute;
-  left: 545px;
+  top: 20px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search_back_div 
+{
+  z-index: 3;
+  height: 45px;
+  width: 490px;
+  display: flex;
+  flex-direction: row;
   /* background-color: blue; */
 }
 .search_icon {
@@ -44,15 +68,16 @@
   background-color: transparent;
   padding: 1px;
   border-right: 0;
-  position: absolute;
-  left: 8px;
+  position: relative;
+  left: 23px;
   top: 9px;
 }
 .search_box {
   height: 30px;
-  width: 80%;
-  position: absolute;
-  top: 5px;
+  width: 338px;
+  position: relative;
+  top: 3.5px;
+  left: -11.5px;
   padding-left: 40px;
   font-size: 0.98rem;
   border-radius: 20px;
@@ -81,22 +106,25 @@
   border-radius: 20px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  position: absolute;
-  left: 927px;
+  position: relative;
+  left: -13px;
+  top: 3.5px;
 }
 .container_navbar_search {
   z-index: 4;
   height: auto;
-  width: 23.1vw;
+  width: 360px; 
   background-color: white;
 
   border: solid 1px rgb(158, 158, 158);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   display: flex;
   flex-direction: column;
 
-  position: fixed;
-  top: 53.5px;
-  left: 570.8px;
+  
+  position: relative;
+  top: -8px;
+  left:-29px;
 }
 .hommie
 {
@@ -106,4 +134,53 @@
   color: grey;
   position: relative;
   top:200px;
+}
+@media(max-width:1480px)
+{
+  .nav_flexbox
+  {
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:78px;
+    margin-left: 0;
+    background-color: rgb(70, 70, 70);
+  }
+  .nav {
+    font-size: 1.2rem;
+    color:rgb(244, 244, 244);
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  .nav:hover
+  {
+    color: rgb(192, 192, 192);
+  }
+}
+@media(max-width:860px)
+{
+  .name_nav
+  {
+    display: none;
+  }
+  .search_back_div
+  {
+    height: 45px;
+    width: 490px;
+    display: flex;
+    flex-direction: row;
+  }
+  .search
+   {
+    padding-top: 8px;
+    height: 28px;
+  }
+  .container_navbar_search
+   {  
+    position: relative;
+    top: -7.5px;
+  }
 }

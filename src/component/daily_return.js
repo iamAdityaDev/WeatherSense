@@ -112,8 +112,10 @@ const DailyReturn = (props) => {
       ) : (
         <>
           <div className="error_back_daily">
-            <p className="error_current_daily">No Results found !!</p>
-            <p className="try_again_daily">Check your location and try again</p>
+              <div className="second_error_back_daily">
+              <p className="error_current_daily">No Results found !!</p>
+              <p className="try_again_daily">Check your location and try again</p>
+            </div>
           </div>
         </>
       )}

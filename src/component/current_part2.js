@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./current_part2.css";
+import "./current_phone.css";
 import WaterDrop from "@mui/icons-material/WaterDrop";
-import Spinner from "../spinner";
 
 const CurrentPart2 = (props) => {
   const [final_data, setfinal_data] = useState([])
-  const [loading, setloading] = useState(true);
 
   const update_weather_hourly_current = async () => {
     const url = `https://api.weatherapi.com/v1/forecast.json?key=31c8b19cd52d4aad9e4160932232206&q=${props.city}`;
-    setloading(true)
     let data = await fetch(url);
     let parsed_data = await data.json();
     const object = Object.keys(parsed_data);
@@ -29,10 +27,9 @@ const CurrentPart2 = (props) => {
         j++;
       }
       setfinal_data(newData)
-      setloading(false)
     } 
     else {
-      setloading(false);
+      //error message
     }
   };
 
@@ -55,8 +52,8 @@ const CurrentPart2 = (props) => {
 
   return (
     <>
+    <div className="container_second_back">
       <div className="container_second">
-      {loading&&<Spinner/>}
         {final_data.length !== 0 ? (
           final_data.map((element, index) => (
             <>
@@ -76,6 +73,7 @@ const CurrentPart2 = (props) => {
             </>
           ))
         ) : ('')}
+      </div>
       </div>
     </>
   );

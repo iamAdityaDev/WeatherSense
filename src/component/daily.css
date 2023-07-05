@@ -1,23 +1,47 @@
 .container_daily
 {
     height: auto;
-    width: 80%;
+    width: 100%;
     /* background-color: red; */
     border:none;
     position: absolute;
-    top:162px;
-    left: 10%;
+    top:177px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 18px;
+    overflow: hidden;
+}
+.daily_header_back
+{
+    height: auto;
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    top:83px;
+    margin-left: 6%;
 }
 .head_daily_weather
 {
     font-size: 1.3rem;
     color: rgb(90, 90, 90);
     font-weight: 500;
-    position: absolute;
-    top:83px;
-    left: 12.25%;
+}
+@media(max-width:1480px)
+{
+    .container_daily
+    {
+        position:relative;
+        top:230px;
+    }
+    .daily_header_back
+    {
+        position: absolute;
+        top:133px;
+    }
 }

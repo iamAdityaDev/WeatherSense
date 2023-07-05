@@ -150,29 +150,142 @@
 }
 .error_back_daily
 {
-    height:90vh;
+    z-index: 0;
+    height:680px;
     width: 100%;
-    position: absolute;
-    top:-81.5px;
-    left: 0%;
+    position: fixed;
+    top:78px;
+    display: flex;
+    justify-content: center;
     background-color: rgb(238, 238, 238);
     /* background-color: red; */
 }
+.second_error_back_daily
+{
+    height: 120px;
+    width: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:120px;
+}
 .error_current_daily
 {
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 500;
     color: rgb(129, 129, 129);
-    position: absolute;
-    top:20%;
-    left:36%;
 }
 .try_again_daily
 {
     font-size: 1.2rem;
     font-weight: 500;
     color: rgb(67, 67, 67);
+    position: relative;
+    top:-60px;
+}
+@media(max-width:1480px)
+{
+    .error_back_daily
+    {
+        position: fixed;
+        top:130px;
+        /* background-color: brown; */
+    }
+}
+@media(max-width:620px)
+{
+    .daily_div
+{
+    height: 220px;
+    width: 460px;
+}
+.flex_one_d
+{
+    height: 75px;
+    /* background-color: red;  */
+}
+.day_d
+{
+    font-size: 1.06rem;
+    font-weight: 600;
+    color: rgb(137, 137, 137);
+    position:relative;
+    top:-12px;
+    left:10px;
+}
+.date_d
+{
+    font-size: 1.06rem;
+    font-weight: 600;
+    color: rgb(137, 137, 137);
+    position:absolute;
+    top:11px;
+    left:11px;
+}
+.cloud_image_d
+{
+    height: 65px;
     position: absolute;
-    top:32%;
-    left:38%;
+    top: -3px;
+    left: 85px;
+}
+.max_temp_d
+{
+    font-size: 2.6rem;
+    position: absolute;
+    top:-41px;
+    left:151px;
+}
+.min_temp_d
+{
+    font-size: 1.08rem;
+    font-weight: 500;
+    position: absolute;
+    top:10px;
+    left:205px;
+}
+.drop_d
+{
+    opacity: 0.4;
+    height: 60px;
+    position: absolute;
+    top:17px;
+    left: 377px;
+}
+.chance_rain_d
+{
+    font-size: 1.1rem;
+    position: absolute;
+    top: -1.5px;
+    left:405px;
+}
+.weather_condition_d
+{
+    font-size: 1.12rem;
+    position: relative;
+    top:-11px;
+}
+.info_label_d
+{
+    color: rgb(100, 100, 100);
+}
+.info_label_in_d
+{
+    margin-left: 45%;
+    color: rgb(41, 41, 41);
+}
+.info_label_in_d_sun
+{
+    margin-left: 30%;
+    color: rgb(41, 41, 41);
+}
+.humidity_value_d
+{
+    margin-left: 54%;
+    color: rgb(41, 41, 41);
+}
 }

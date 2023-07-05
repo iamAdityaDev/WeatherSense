@@ -1,60 +1,100 @@
 .container_h
 {
     height: auto;
-    width: 80%;
-    /* background-color: red; */
+    width: 100%;
     border:none;
     position:relative;
-    top:162px;
-    left: 10%;
+    top:177px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 18px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.hourly_head_back
+{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* background-color: red; */
+    position: absolute;
+    top:83px;
 }
 .head_hourly_weather
 {
     font-size: 1.3rem;
     color: rgb(90, 90, 90);
     font-weight: 500;
-    position: absolute;
-    top:83px;
-    left: 12.25%;
+    margin-right: 26%;
+    margin-left: 5%;
 }
 .date_for_hourly
 {
     font-size: 1.3rem;
     color: rgb(90, 90, 90);
     font-weight: 500;
-    position: absolute;
-    top:83px;
-    right: 10.6%;
+    margin-right: 10%;
 }
 .error_back_hourly
 {
-    height:90vh;
+    z-index: 0;
+    height:680px;
     width: 100%;
-    position: absolute;
-    top:-81.5px;
-    left: 0%;
+    position: fixed;
+    top:78px;
+    display: flex;
+    justify-content: center;
     background-color: rgb(238, 238, 238);
     /* background-color: red; */
 }
+.second_error_back_hourly
+{
+    height: 120px;
+    width: 100%;
+    /* background-color: violet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:120px;
+}
 .error_current_hourly
 {
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 500;
     color: rgb(129, 129, 129);
-    position: absolute;
-    top:20%;
-    left:36%;
 }
 .try_again_hourly
 {
     font-size: 1.2rem;
     font-weight: 500;
     color: rgb(67, 67, 67);
-    position: absolute;
-    top:32%;
-    left:38%;
+    position: relative;
+    top:-60px;
+}
+@media(max-width:1480px)
+{
+    .container_h
+    {
+        position:relative;
+        top:230px;
+    }
+    .hourly_head_back
+    {
+        position: absolute;
+        top:133px;
+    }
+    .error_back_hourly
+    {
+        position: fixed;
+        top:130px;
+        /* background-color: green; */
+    }
 }

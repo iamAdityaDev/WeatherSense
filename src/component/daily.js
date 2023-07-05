@@ -35,10 +35,12 @@ const Daily = (props) => {
 
     {jagah.length !== 0 ? (
         <>
-            <p className="head_hourly_weather">
+        <div className="daily_header_back">
+            <p className="head_daily_weather">
               {jagah.location.name}, {jagah.location.country} - Daily Weather ( 10
               Days)
             </p>
+          </div>
         </>
       ) : (''
       )}

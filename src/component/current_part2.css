@@ -9,6 +9,24 @@
     display: flex;
     flex-direction: column;
 }
+@media (max-width: 1520px) 
+{
+    .container_second_back
+    {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position:absolute;
+        top:880px;
+    }
+    .container_second
+    {
+       position: relative;
+       left: 0;
+       top: 0;
+    }
+}
 .div_second
 {
     height: 100px;
@@ -92,4 +110,81 @@
     position: relative;
     top:-11px;
     left:15.5px;
+}
+@media(max-width:660px)
+{
+    .container_second_back
+    {
+        height: auto;
+        width: 100%;
+        position:absolute;
+        top:790px;
+    }
+    .container_second
+    {
+       align-items: center;
+       overflow: hidden;
+    }
+    .div_second
+    {
+        height: 90px;
+        width: 469px;
+    }
+    .time_current_sec
+    {
+        font-size: 1.05rem;
+        position:relative;
+        top:-13px;
+        left:6px;
+    }
+    .cloud_image_current_sec
+    {
+        height: 45px;
+        position: relative;
+        top: 7px;
+        left: 40px;
+    }
+    .temp_current_sec
+    {
+        font-size: 2rem;
+
+        position: relative;
+        top:-26px;
+        left:45px;
+    }
+    .feels_like_current_sec
+    {
+        font-size: 1.04rem;
+        position: relative;
+        top: -8px;
+        left:105px;
+    }
+    .feels_like_current_value
+    {
+        font-size: 1.05rem;
+        position: relative;
+        top:-8.5px;
+        left:112px;
+    }
+    .drop_h_current_sec
+    {
+        opacity: 0.35;
+        position: relative;
+        top:9px;
+        left: 165px;
+    }
+    .rain_chance_current_sec
+    {
+        font-size: 1.06rem;
+        position: relative;
+        top:-7.5px;
+        left:170px;
+    }
+    .condition_current_sec
+    {
+        font-size: 1.05rem;
+        position: relative;
+        top:-16px;
+        left:11px;
+    }
 }
