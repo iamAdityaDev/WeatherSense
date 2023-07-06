@@ -54,19 +54,21 @@ const DailyReturn = (props) => {
         weatherdaily.map((element, index) => (
           <div className="daily_div" key={index}>
             <div className="flex_one_d">
+            <div className="temp_max_min">
               <p className="day_d">{new Date(element[0].date).toLocaleDateString('en-US', { weekday: 'short' })}</p>
               <p className="date_d">{element[0].date.slice(5, 10)}</p>
+            </div>
               <img
                 src={element[0].day.condition.icon}
                 alt="cloud hai"
                 className="cloud_image_d"
               />
-              <p className="max_temp_d">
-                {Math.floor(element[0].day.maxtemp_c)}&deg;
-              </p>
-              <p className="min_temp_d">
-                /{Math.floor(element[0].day.mintemp_c)}&deg;
-              </p>
+                <p className="max_temp_d">
+                  {Math.floor(element[0].day.maxtemp_c)}&deg;
+                </p>
+                <p className="min_temp_d">
+                  /{Math.floor(element[0].day.mintemp_c)}&deg;
+                </p>
               <WaterDrop className="drop_d" />
               <p className="chance_rain_d">
                 {element[0].day.daily_chance_of_rain}%

@@ -7,7 +7,7 @@ import Hourly from "./component/hourly";
 import Daily from "./component/daily";
 import CurrentPart2 from "./component/current_part2";
 import Home from "./component/home";
-import './App.css'
+import "./App.css";
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -34,9 +34,12 @@ function App() {
 
   const changeLoc = (name, country) => {
     let cont = document.getElementById("cont");
+    let search_click=document.getElementById('search_id')
+
     cont.style.display = "none";
     let text = document.getElementById("search_box_id");
     text.value = `${name}, ${country}`;
+    search_click.click()
   };
 
   const fetch_city = () => {
@@ -60,8 +63,6 @@ function App() {
   };
 
   useEffect(() => {
-   
-
     handleOnChange();
   }, []);
 
@@ -75,13 +76,25 @@ function App() {
               <Link to="/" onClick={title_change_home} className="nav home">
                 Home
               </Link>
-              <Link to="/current" onClick={title_change_current} className="nav current">
+              <Link
+                to="/current"
+                onClick={title_change_current}
+                className="nav current"
+              >
                 Current
               </Link>
-              <Link to="/daily" onClick={title_change_daily} className="nav daily">
+              <Link
+                to="/daily"
+                onClick={title_change_daily}
+                className="nav daily"
+              >
                 Daily
               </Link>
-              <Link to="/hourly" onClick={title_change_hourly} className="nav hourly">
+              <Link
+                to="/hourly"
+                onClick={title_change_hourly}
+                className="nav hourly"
+              >
                 Hourly
               </Link>
             </div>
@@ -96,37 +109,39 @@ function App() {
                   id="search_box_id"
                 />
                 <Link
-                onClick={fetch_city}
-                to="/current"
-                className="search"
-                id="search_id"
+                  onClick={fetch_city}
+                  to="/current"
+                  className="search"
+                  id="search_id"
                 >
                   Search
                 </Link>
               </div>
               <div className="container_navbar_search" id="cont">
-            {locations.map?locations.map((element, index) => {
-              const combinedName = `${element.name}, ${element.country}`;
-              const truncatedName =
-                combinedName.length > 40
-                  ? combinedName.slice(0, 38) + ".."
-                  : combinedName;
+                {locations.map
+                  ? locations.map((element, index) => {
+                      const combinedName = `${element.name}, ${element.country}`;
+                      const truncatedName =
+                        combinedName.length > 40
+                          ? combinedName.slice(0, 38) + ".."
+                          : combinedName;
 
-              return (
-                <Option
-                  key={index}
-                  onClick={() => changeLoc(element.name, element.country)}
-                  name={element.name}
-                  region={element.region}
-                  combinedName={truncatedName}
-                />
-              );
-            }):''}
-          </div>
+                      return (
+                        <Option
+                          key={index}
+                          onClick={() =>
+                            changeLoc(element.name, element.country)
+                          }
+                          name={element.name}
+                          region={element.region}
+                          combinedName={truncatedName}
+                        />
+                      );
+                    })
+                  : ""}
+              </div>
             </div>
-            
           </div>
-        
         </div>
         <Routes>
           <Route path="/" element={<Home />} />

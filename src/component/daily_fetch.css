@@ -95,7 +95,7 @@
     width: 99%;
     /* background-color: red; */
     position: relative;
-    top: -12%;
+    top: -26px;
     left: 0.5%;
     display: flex;
     flex-direction: row;
@@ -198,15 +198,35 @@
 }
 @media(max-width:620px)
 {
-    .daily_div
+.daily_div
 {
     height: 220px;
     width: 460px;
 }
 .flex_one_d
 {
-    height: 75px;
+    height: 80px;
+    width: 99%;
     /* background-color: red;  */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0.5%;
+    top: 0.5%;
+}
+.flex_one_d
+{
+    height: 75px;
+}
+.temp_max_min
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-right: 7%;
 }
 .day_d
 {
@@ -214,78 +234,87 @@
     font-weight: 600;
     color: rgb(137, 137, 137);
     position:relative;
-    top:-12px;
-    left:10px;
+    top:40px;
+    left:0px;
 }
 .date_d
 {
     font-size: 1.06rem;
     font-weight: 600;
     color: rgb(137, 137, 137);
-    position:absolute;
-    top:11px;
-    left:11px;
+    position:relative;
+    top:-39px;
+    left:0px;
 }
 .cloud_image_d
 {
     height: 65px;
-    position: absolute;
-    top: -3px;
-    left: 85px;
+    position: relative;
+    top: -6px;
+    left: 0px;
 }
 .max_temp_d
 {
     font-size: 2.6rem;
-    position: absolute;
-    top:-41px;
-    left:151px;
+    position: relative;
+    top:-7px;
+    left:0px;
 }
 .min_temp_d
 {
     font-size: 1.08rem;
     font-weight: 500;
-    position: absolute;
-    top:10px;
-    left:205px;
+    position: relative;
+    top:2px;
+    left:-12px;
+    margin-right: 26%;
 }
 .drop_d
 {
     opacity: 0.4;
     height: 60px;
-    position: absolute;
-    top:17px;
-    left: 377px;
+    position: relative;
+    top:-7px;
+    left: 0px;
 }
 .chance_rain_d
 {
     font-size: 1.1rem;
-    position: absolute;
-    top: -1.5px;
-    left:405px;
+    position: relative;
+    top: -7px;
+    left:0px;
+    margin-right: 2%;
 }
 .weather_condition_d
 {
     font-size: 1.12rem;
     position: relative;
-    top:-11px;
+    top:-20px;
+}
+.outer_flexbox_d
+{
+    /* background-color: red; */
+    position: relative;
+    top: -39px;
 }
 .info_label_d
 {
+    margin-left: 1.5%;
     color: rgb(100, 100, 100);
 }
 .info_label_in_d
 {
-    margin-left: 45%;
+    margin-left: auto;
     color: rgb(41, 41, 41);
 }
 .info_label_in_d_sun
 {
-    margin-left: 30%;
+    margin-left: auto;
     color: rgb(41, 41, 41);
 }
 .humidity_value_d
 {
-    margin-left: 54%;
+    margin-left: auto;
     color: rgb(41, 41, 41);
 }
 }
