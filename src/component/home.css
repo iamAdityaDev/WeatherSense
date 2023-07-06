@@ -152,7 +152,7 @@
     .heading_weather_send
     {
         position: absolute;
-        top:105px;
+        top:117px;
         left: 5%;
         color: rgb(79, 79, 79);
     }
@@ -161,7 +161,7 @@
         font-size: 1.1rem;
         font-weight: 600;
         position: absolute;
-        top:208px;
+        top:220px;
         left: 7%;
         color: rgb(138, 138, 138);
     }
@@ -179,6 +179,11 @@
 }
 @media(max-width:1045px)
 {
+    .home_footer
+    {
+        height: 110px;
+        margin-top: 17%;
+    }
     .ss_head
     {
         position: relative;
@@ -195,13 +200,13 @@
     {
         margin-left: 20px;
         margin-right: 20px;
-        margin-bottom: -16px;
+        margin-bottom: -15px;
     }
     .home_hourly
     {
         margin-left: 35px;
         margin-right: 35px;
-        margin-bottom: -21px;
+        margin-bottom: -16px;
     }
     .home_daily
     {
