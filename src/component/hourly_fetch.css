@@ -164,8 +164,8 @@
     position:relative;
     top:-10px;
     left:-3px;
-    margin-right: 3%;
-    margin-left: 0%;
+    margin-right:auto;
+    margin-left: 2%;
 }
 .cloud_image_h
 {
@@ -181,7 +181,7 @@
     position: relative;
     top:-8px;
     left:0px;
-    margin-right: 4%;
+    margin-right: auto;
 }
 .feelslike_label_h
 {
@@ -197,7 +197,7 @@
     position: relative;
     top: -8.3px;
     left:0.5px;
-    margin-right: 4%;
+    margin-right: auto;
 }
 .drop_h
 {
@@ -214,7 +214,7 @@
     top: -7.5px;
     left:0px;
     margin-left: 0px;
-    margin-right: 1%;
+    margin-right: 2%;
 }
 .weather_condition_h
 {

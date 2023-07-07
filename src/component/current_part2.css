@@ -45,22 +45,28 @@
     /* background-color: blue; */
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .time_current_sec
 {
     font-size: 1.17rem;
     font-weight: 600;
+    width: 55px;
     color: rgb(137, 137, 137);
     position:relative;
-    top:-9px;
-    left:7.6px;
+    top:0px;
+    left: 0px;
+    margin-left: 3%;
+    margin-right: 8%;
 }
 .cloud_image_current_sec
 {
     height: 50px;
     position: relative;
-    top: 7px;
-    left: 55px;
+    top: 2px;
+    left: 0px;
+    margin-right: 1%;
 }
 .temp_current_sec
 {
@@ -68,40 +74,47 @@
     font-weight: 500;
     color: rgb(72, 72, 72);
     position: relative;
-    top:-33px;
-    left:62px;
+    top:-1.5px;
+    left: 0px;
+    margin-right: 11%;
 }
 .feels_like_current_sec
 {
     font-size: 1.16rem;
+    width: 180px;
+    /* background-color: red; */
     color: rgb(81, 81, 81);
     position: relative;
-    top: -4px;
-    left:105px;
+    top: 0px;
+    left: 0px;
+    margin-right: 1%;
 }
 .feels_like_current_value
 {
     font-size: 1.17rem;
     color: rgb(58, 58, 58);
     position: relative;
-    top:-4px;
-    left:114px;
+    top:-1px;
+    left: -1px;
+    margin-right: 8%;
 }
 .drop_h_current_sec
 {
     opacity: 0.35;
     height: 60px;
     position: relative;
-    top:15px;
-    left: 184px;
+    top:-2px;
+    left: 0px;
+    margin-right: 1%;
 }
 .rain_chance_current_sec
 {
     font-size: 1.2rem;
     color: rgb(58, 58, 58);
     position: relative;
-    top:-5.5px;
-    left:191px;
+    top:-2.5px;
+    left: 0px;
+    margin-right: 3%;
 }
 .condition_current_sec
 {
@@ -133,52 +146,30 @@
     .time_current_sec
     {
         font-size: 1.05rem;
-        position:relative;
-        top:-13px;
-        left:6px;
     }
     .cloud_image_current_sec
     {
         height: 45px;
-        position: relative;
-        top: 7px;
-        left: 40px;
     }
     .temp_current_sec
     {
         font-size: 2rem;
-
-        position: relative;
-        top:-26px;
-        left:45px;
     }
     .feels_like_current_sec
     {
         font-size: 1.04rem;
-        position: relative;
-        top: -8px;
-        left:105px;
     }
     .feels_like_current_value
     {
         font-size: 1.05rem;
-        position: relative;
-        top:-8.5px;
-        left:112px;
     }
     .drop_h_current_sec
     {
         opacity: 0.35;
-        position: relative;
-        top:9px;
-        left: 165px;
     }
     .rain_chance_current_sec
     {
         font-size: 1.06rem;
-        position: relative;
-        top:-7.5px;
-        left:170px;
     }
     .condition_current_sec
     {

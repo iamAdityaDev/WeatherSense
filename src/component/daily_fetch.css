@@ -226,7 +226,8 @@
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    margin-right: 7%;
+    margin-right:auto;
+    margin-left: 2.5%;
 }
 .day_d
 {
@@ -267,7 +268,7 @@
     position: relative;
     top:2px;
     left:-12px;
-    margin-right: 26%;
+    margin-right: auto;
 }
 .drop_d
 {
@@ -283,7 +284,7 @@
     position: relative;
     top: -7px;
     left:0px;
-    margin-right: 2%;
+    margin-right: 3%;
 }
 .weather_condition_d
 {
