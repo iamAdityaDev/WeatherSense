@@ -84,7 +84,7 @@
     .current_one_back
     {
         position:absolute;
-        top:218px;
+        top:209.5px;
     }
     .header_current1
     {
@@ -279,14 +279,14 @@
 .error_back_current
 {
     z-index: 0;
-    height:680px;
+    height:max-content;
     width: 100%;
     position: fixed;
     top:78px;
     display: flex;
     justify-content: center;
-    background-color: rgb(238, 238, 238);
-    /* background-color: red; */
+    /* background-color: rgb(238, 238, 238); */
+    background-color: red;
 }
 .second_error_back_div
 {
